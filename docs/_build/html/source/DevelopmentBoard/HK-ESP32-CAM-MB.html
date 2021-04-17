@@ -1,0 +1,541 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="zh-CH" >
+<head>
+  <meta charset="utf-8" />
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+  <title>HK-ESP32-CAM-MB &mdash; 弘科科技  文档</title>
+  
+
+  
+  <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/theme.css" type="text/css" />
+
+  
+  
+
+  
+  
+
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
+        <script src="../../_static/jquery.js"></script>
+        <script src="../../_static/underscore.js"></script>
+        <script src="../../_static/doctools.js"></script>
+        <script src="../../_static/language_data.js"></script>
+    
+    <script type="text/javascript" src="../../_static/js/theme.js"></script>
+
+    
+    <link rel="index" title="索引" href="../../genindex.html" />
+    <link rel="search" title="搜索" href="../../search.html" />
+    <link rel="next" title="HK-ESP32-MiniKit(BLACK)" href="HK-ESP32-MiniKit%28BLACK%29.html" />
+    <link rel="prev" title="HK-ESP32-CAM" href="HK-ESP32-CAM.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../../index.html" class="icon icon-home"> 弘科科技
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">如何使用此文档</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../HowUse/index.html">如何使用此文档</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Languages/语言</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../Languages/index.html">Switch Between Languages/切换语言</a></li>
+</ul>
+<p class="caption"><span class="caption-text">开发环境搭建</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../Arduino/index.html">Arduino开发环境搭建</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../esp-idf/index.html">ESP-IDF开发环境搭建</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../EclipseIDF/index.html">Eclipse IDE开发环境搭建</a></li>
+</ul>
+<p class="caption"><span class="caption-text">无线模组</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../WiFi/index.html">WiFi</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Bluetooth/index.html">Bluetooth</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Zigbee/index.html">Zigbee</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../LoRa/index.html">LoRa</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Sub1G/index.html">Sub1G</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../2.4G/index.html">2.4G</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Multi-Protocol/index.html">Multi-Protocol</a></li>
+</ul>
+<p class="caption"><span class="caption-text">开发板</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="HK-D1-MiniPro4M.html">HK-D1-MiniPro4M</a></li>
+<li class="toctree-l1"><a class="reference internal" href="HK-D1-MiniPro16M.html">HK-D1-MiniPro16M</a></li>
+<li class="toctree-l1"><a class="reference internal" href="HK-ESP32-CAM.html">HK-ESP32-CAM</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">HK-ESP32-CAM-MB</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#id1">硬件简介</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#id2">产品概述</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id3">产品特性</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id4">应用场景</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id5">技术规格</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id6">管脚定义</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#id7">软件示例</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#arduino-ide">Arduino IDE平台示例</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#hk-esp32-cam">HK-ESP32-CAM模块视频流和拍照示例</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="HK-ESP32-MiniKit%28BLACK%29.html">HK-ESP32-MiniKit(BLACK)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="HK-ESP32-MiniKit%28BLUE%29.html">HK-ESP32-MiniKit(BLUE)</a></li>
+</ul>
+<p class="caption"><span class="caption-text">测试板</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../TestBoard/HK-ESPTB.html">HK-ESPTB</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../TestBoard/HK-RFTB.html">HK-RFTB</a></li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">弘科科技</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../index.html" class="icon icon-home"></a> &raquo;</li>
+        
+          <li><a href="index.html">&lt;no title&gt;</a> &raquo;</li>
+        
+      <li>HK-ESP32-CAM-MB</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            <a href="../../_sources/source/DevelopmentBoard/HK-ESP32-CAM-MB.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="hk-esp32-cam-mb">
+<h1>HK-ESP32-CAM-MB<a class="headerlink" href="#hk-esp32-cam-mb" title="永久链接至标题">¶</a></h1>
+<div class="section" id="id1">
+<h2>硬件简介<a class="headerlink" href="#id1" title="永久链接至标题">¶</a></h2>
+<div class="section" id="id2">
+<h3>产品概述<a class="headerlink" href="#id2" title="永久链接至标题">¶</a></h3>
+<p>HK-ESP32-CAM-MB是弘科为HK-ESP32-CAM小型相机模块设计的一款底座。
+HK-ESP32-CAM-MB配备USB转串口接口，方便用户烧录程序。
+此底座可以和HK-ESP32-CAM组成一个作为最小系统独立工作的模块。
+HK-ESP32-CAM模块是弘科设计的一款尺寸为39.8*27*的小型相机模块，此模块可以作为最小系统独立工作。
+基于ESP32设计的全新WiFi+蓝牙双模式开发板，采用PCB板载天线，带有2个高性能的32位LX6CPU,采用7级别
+流水线架构，主频调整范围80MHz到240Mhz。超低功耗，深度睡眠电流最低达到6mA。</p>
+<p>HK-ESP32-CAM可广泛应用于各种物联网场合，适用于家庭智能设备、工业无线控制、无线监控、QR无线识别，
+无线定位系统信号以及其它物联网应用，是物联网应用的理想解决方案。</p>
+<p>HK-ESP32-CAM采用DIP封装，直接插上HK-ESP32-CAM-MB底板即可使用，可靠的连接方式，方便应用于各种物联网硬件终端场合。</p>
+<p>体积超小的802.11b/g/n Wi-Fi + BT/BLE SoC模块。</p>
+<div class="align-center figure" id="id9">
+<img alt="HK-ESP32-CAM-MB" src="../../_images/ESP32-CAM-MB.png" />
+<p class="caption"><span class="caption-text">HK-ESP32-CAM-MB</span><a class="headerlink" href="#id9" title="永久链接至图片">¶</a></p>
+</div>
+<div class="align-center figure" id="id10">
+<img alt="HK-ESP32-CAM module" src="../../_images/HK-ESP32-CAMmodule.png" />
+<p class="caption"><span class="caption-text">HK-ESP32-CAM module</span><a class="headerlink" href="#id10" title="永久链接至图片">¶</a></p>
+</div>
+</div>
+<div class="section" id="id3">
+<h3>产品特性<a class="headerlink" href="#id3" title="永久链接至标题">¶</a></h3>
+<p>采用低功耗双核32位CPU，可作应用处理器</p>
+<p>主频高达240MHz，运算能力高达 600 DMIPS</p>
+<p>内置 520 KB SRAM，外置8MB PSRAM</p>
+<p>支持UART/SPI/I2C/PWM/ADC/DAC等接口</p>
+<p>支持OV2640和OV7670摄像头，内置闪光灯</p>
+<p>支持图片WiFI上传</p>
+<p>支持TF卡</p>
+<p>支持多种休眠模式</p>
+<p>内嵌Lwip和FreeRTOS</p>
+<p>支持 STA/AP/STA+AP 工作模式</p>
+<p>支持 Smart Config/AirKiss 一键配网</p>
+<p>支持二次开发</p>
+</div>
+<div class="section" id="id4">
+<h3>应用场景<a class="headerlink" href="#id4" title="永久链接至标题">¶</a></h3>
+<p>家庭智能设备图传</p>
+<p>无线监控</p>
+<p>智慧农业</p>
+<p>QR无线识别</p>
+<p>无线定位系统信号</p>
+<p>以及其它物联网应用</p>
+</div>
+<div class="section" id="id5">
+<h3>技术规格<a class="headerlink" href="#id5" title="永久链接至标题">¶</a></h3>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 25%" />
+<col style="width: 75%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>参数</p></th>
+<th class="head"><p>描述</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>工作电压</p></td>
+<td><p>4.75-5.25V</p></td>
+</tr>
+<tr class="row-odd"><td><p>SPIFlash</p></td>
+<td><p>默认 32Mbit</p></td>
+</tr>
+<tr class="row-even"><td><p>RAM     内部</p></td>
+<td><p>520KB+外部 8MB PSRAM</p></td>
+</tr>
+<tr class="row-odd"><td><p>Wi-Fi</p></td>
+<td><p>802.11b/g/n/e/i</p></td>
+</tr>
+<tr class="row-even"><td><p>蓝牙</p></td>
+<td><p>蓝牙 4.2BR/EDR和 BLE标准</p></td>
+</tr>
+<tr class="row-odd"><td><p>支持接口（2Mbps）</p></td>
+<td><p>UART、SPI、I2C、PWM</p></td>
+</tr>
+<tr class="row-even"><td><p>支持 TF卡</p></td>
+<td><p>最大支持 4G</p></td>
+</tr>
+<tr class="row-odd"><td><p>IO口</p></td>
+<td><p>9个</p></td>
+</tr>
+<tr class="row-even"><td><p>串口速率</p></td>
+<td><p>默认 115200bps</p></td>
+</tr>
+<tr class="row-odd"><td><p>频谱范围</p></td>
+<td><p>2400 ~2483.5MHz</p></td>
+</tr>
+<tr class="row-even"><td><p>天线形式</p></td>
+<td><p>板载 PCB 天线 , 增益 2dBi</p></td>
+</tr>
+<tr class="row-odd"><td><p>图像输出格式</p></td>
+<td><p>JPEG(仅 OV2640支持),BMP,GRAYSCALE</p></td>
+</tr>
+<tr class="row-even"><td><p>封装方式</p></td>
+<td><p>DIP-16</p></td>
+</tr>
+<tr class="row-odd"><td><p>发射功率</p></td>
+<td><p>802.11b:17±2dBm (&#64;11Mbps)</p>
+<p>802.11g:14±2dBm (&#64;54Mbps)</p>
+<p>802.11n:13±2dBm (&#64;MCS7)</p>
+</td>
+</tr>
+<tr class="row-even"><td><p>接收灵敏度</p></td>
+<td><p>CCK,1Mbps:-90dBm</p>
+<p>CCK,11Mbps:-85dBm</p>
+<p>6Mbps(1/2BPSK):-88dBm</p>
+<p>54Mbps(3/464-QAM):-70dBm</p>
+<p>MCS7(65Mbps,72.2Mbps):-67dBm</p>
+<p>功耗      关闭闪光灯:<a class="reference external" href="mailto:180mA&#37;&#52;&#48;5V">180mA<span>&#64;</span>5V</a></p>
+<p>开启闪光灯并且亮度调到最大:<a class="reference external" href="mailto:310mA&#37;&#52;&#48;5V">310mA<span>&#64;</span>5V</a></p>
+<p>Deep-sleep:最低功耗可以达到 <a class="reference external" href="mailto:6mA&#37;&#52;&#48;5V">6mA<span>&#64;</span>5V</a></p>
+<p>Moderm-sleep:最低可达到 <a class="reference external" href="mailto:20mA&#37;&#52;&#48;5V">20mA<span>&#64;</span>5V</a>
+Light-sleep:最低可达到 <a class="reference external" href="mailto:6&#46;7mA&#37;&#52;&#48;5V">6<span>&#46;</span>7mA<span>&#64;</span>5V</a></p>
+</td>
+</tr>
+<tr class="row-odd"><td><p>安全性</p></td>
+<td><p>WPA/WPA2/WPA2-Enterprise/WPS</p></td>
+</tr>
+<tr class="row-even"><td><p>工作温度</p></td>
+<td><p>-20 ℃~ 70 ℃</p></td>
+</tr>
+<tr class="row-odd"><td><p>存储环境</p></td>
+<td><p>-40 ℃~ 125 ℃, &lt; 90%RH</p></td>
+</tr>
+<tr class="row-even"><td><p>重量</p></td>
+<td><p>10g</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="id6">
+<h3>管脚定义<a class="headerlink" href="#id6" title="永久链接至标题">¶</a></h3>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 35%" />
+<col style="width: 65%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>CAM引脚名称</p></th>
+<th class="head"><p>ESP32引脚方向</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>D0</p></td>
+<td><p>PIN5</p></td>
+</tr>
+<tr class="row-odd"><td><p>D1</p></td>
+<td><p>PIN18</p></td>
+</tr>
+<tr class="row-even"><td><p>D2</p></td>
+<td><p>PIN19</p></td>
+</tr>
+<tr class="row-odd"><td><p>D3</p></td>
+<td><p>PIN21</p></td>
+</tr>
+<tr class="row-even"><td><p>D4</p></td>
+<td><p>PIN36</p></td>
+</tr>
+<tr class="row-odd"><td><p>D5</p></td>
+<td><p>PIN39</p></td>
+</tr>
+<tr class="row-even"><td><p>D6</p></td>
+<td><p>PIN34</p></td>
+</tr>
+<tr class="row-odd"><td><p>D7</p></td>
+<td><p>PIN0</p></td>
+</tr>
+<tr class="row-even"><td><p>XCLK</p></td>
+<td><p>PIN22</p></td>
+</tr>
+<tr class="row-odd"><td><p>PCLK</p></td>
+<td><p>PIN25</p></td>
+</tr>
+<tr class="row-even"><td><p>VSYNC</p></td>
+<td><p>PIN23</p></td>
+</tr>
+<tr class="row-odd"><td><p>SDA</p></td>
+<td><p>PIN26</p></td>
+</tr>
+<tr class="row-even"><td><p>SCL</p></td>
+<td><p>PIN27</p></td>
+</tr>
+<tr class="row-odd"><td><p>POWER PIN</p></td>
+<td><p>PIN32</p></td>
+</tr>
+</tbody>
+</table>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 35%" />
+<col style="width: 65%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>SD引脚名称</p></th>
+<th class="head"><p>ESP32引脚方向</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>CLK</p></td>
+<td><p>PIN14</p></td>
+</tr>
+<tr class="row-odd"><td><p>CMD</p></td>
+<td><p>PIN15</p></td>
+</tr>
+<tr class="row-even"><td><p>DATA0</p></td>
+<td><p>PIN2</p></td>
+</tr>
+<tr class="row-odd"><td><p>DATA1/闪光灯</p></td>
+<td><p>PIN4</p></td>
+</tr>
+<tr class="row-even"><td><p>DATA2</p></td>
+<td><p>PIN12</p></td>
+</tr>
+<tr class="row-odd"><td><p>DATA3</p></td>
+<td><p>PIN13</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="section" id="id7">
+<h2>软件示例<a class="headerlink" href="#id7" title="永久链接至标题">¶</a></h2>
+<div class="section" id="arduino-ide">
+<h3>Arduino IDE平台示例<a class="headerlink" href="#arduino-ide" title="永久链接至标题">¶</a></h3>
+<div class="admonition important">
+<p class="admonition-title">重要</p>
+<p>如果您还没有搭建Arduino开发环境，可以参考
+<a class="reference internal" href="../Arduino/ESP32Arduino.html"><span class="doc">Arduino开发环境搭建(ESP32)</span></a></p>
+</div>
+<div class="admonition important">
+<p class="admonition-title">重要</p>
+<p>如果您想下载全部示例代码，请点击下方链接来下载。如果您只想下载某一个示例，可以在对应的示例下载</p>
+<p><a class="reference external" href="https://pan.baidu.com/s/1piWVCWCGquwZ9-ftsqS66A">下载HK-ESP32-CAM-MB所有示例</a>. （提取码：7ckd）</p>
+</div>
+<div class="section" id="hk-esp32-cam">
+<h4>HK-ESP32-CAM模块视频流和拍照示例<a class="headerlink" href="#hk-esp32-cam" title="永久链接至标题">¶</a></h4>
+<ol class="arabic">
+<li><p><strong>点击下方链接下载Camera示例</strong></p>
+<blockquote>
+<div><p>点击 <a class="reference external" href="https://pan.baidu.com/s/1VSRq1r4uuFC9FuJgUIHqwg">下载Camera示例</a>. （提取码：7cld）</p>
+</div></blockquote>
+</li>
+</ol>
+<ol class="arabic simple" start="2">
+<li><p><strong>下载完成后，进入&quot;Camera&quot;目录下，双击打开&quot;Camera.ino&quot;</strong></p></li>
+</ol>
+<div class="align-center figure">
+<img alt="../../_images/CAM-MB-1.png" src="../../_images/CAM-MB-1.png" />
+</div>
+<ol class="arabic simple" start="3">
+<li><p><strong>选择开发板，选择端口，上传代码</strong></p></li>
+</ol>
+<div class="align-center figure">
+<img alt="../../_images/CAM-MB-2.png" src="../../_images/CAM-MB-2.png" />
+</div>
+<ol class="arabic simple" start="4">
+<li><p><strong>打开串口,选择波特率115200，复位开发板，查看串口输出</strong></p></li>
+</ol>
+<div class="align-center figure">
+<img alt="../../_images/CAM-MB-3.png" src="../../_images/CAM-MB-3.png" />
+</div>
+<ol class="arabic" start="5">
+<li><p><strong>访问视频流服务器</strong></p>
+<blockquote>
+<div><p>您可以打开手机WIFI，用手机连接上&quot;ESP-xx:xx:xx:xx:xx:xx&quot;（每个开发板的后缀不同）。打开浏览器并键入192.168.4.1地址。按Start Streaming按钮开始视频流。按下Get Still拍照，照片存储在sd卡中，照片名字随机命名</p>
+</div></blockquote>
+</li>
+</ol>
+<div class="align-center figure">
+<img alt="../../_images/CAM-MB-4.png" src="../../_images/CAM-MB-4.png" />
+</div>
+</div>
+</div>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+        <a href="HK-ESP32-MiniKit%28BLACK%29.html" class="btn btn-neutral float-right" title="HK-ESP32-MiniKit(BLACK)" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="HK-ESP32-CAM.html" class="btn btn-neutral float-left" title="HK-ESP32-CAM" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &#169; 版权所有 2020, .
+
+    </p>
+  </div>
+    
+    
+    
+    Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

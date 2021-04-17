@@ -1,0 +1,262 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="zh-CH" >
+<head>
+  <meta charset="utf-8" />
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+  <title>HK-32U &mdash; 弘科科技  文档</title>
+  
+
+  
+  <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/theme.css" type="text/css" />
+
+  
+  
+
+  
+  
+
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
+        <script src="../../_static/jquery.js"></script>
+        <script src="../../_static/underscore.js"></script>
+        <script src="../../_static/doctools.js"></script>
+        <script src="../../_static/language_data.js"></script>
+    
+    <script type="text/javascript" src="../../_static/js/theme.js"></script>
+
+    
+    <link rel="index" title="索引" href="../../genindex.html" />
+    <link rel="search" title="搜索" href="../../search.html" />
+    <link rel="next" title="HK-32S" href="HK-32S.html" />
+    <link rel="prev" title="HK-32D" href="HK-32D.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../../index.html" class="icon icon-home"> 弘科科技
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">如何使用此文档</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../HowUse/index.html">如何使用此文档</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Languages/语言</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../Languages/index.html">Switch Between Languages/切换语言</a></li>
+</ul>
+<p class="caption"><span class="caption-text">开发环境搭建</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../Arduino/index.html">Arduino开发环境搭建</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../esp-idf/index.html">ESP-IDF开发环境搭建</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../EclipseIDF/index.html">Eclipse IDE开发环境搭建</a></li>
+</ul>
+<p class="caption"><span class="caption-text">无线模组</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../WiFi/index.html">WiFi</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Bluetooth/index.html">Bluetooth</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Zigbee/index.html">Zigbee</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../LoRa/index.html">LoRa</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Sub1G/index.html">Sub1G</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../2.4G/index.html">2.4G</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">Multi-Protocol</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="HK-32D.html">HK-32D</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">HK-32U</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#id1">产品概述</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="HK-32S.html">HK-32S</a></li>
+<li class="toctree-l2"><a class="reference internal" href="HK-32S-I.html">HK-32S-I</a></li>
+<li class="toctree-l2"><a class="reference internal" href="HK-32B.html">HK-32B</a></li>
+<li class="toctree-l2"><a class="reference internal" href="HK-WROVER.html">HK-WROVER</a></li>
+<li class="toctree-l2"><a class="reference internal" href="HK-WROVER-I.html">HK-WROVER-I</a></li>
+</ul>
+</li>
+</ul>
+<p class="caption"><span class="caption-text">开发板</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../DevelopmentBoard/HK-D1-MiniPro4M.html">HK-D1-MiniPro4M</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../DevelopmentBoard/HK-D1-MiniPro16M.html">HK-D1-MiniPro16M</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../DevelopmentBoard/HK-ESP32-CAM.html">HK-ESP32-CAM</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../DevelopmentBoard/HK-ESP32-CAM-MB.html">HK-ESP32-CAM-MB</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../DevelopmentBoard/HK-ESP32-MiniKit%28BLACK%29.html">HK-ESP32-MiniKit(BLACK)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../DevelopmentBoard/HK-ESP32-MiniKit%28BLUE%29.html">HK-ESP32-MiniKit(BLUE)</a></li>
+</ul>
+<p class="caption"><span class="caption-text">测试板</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../TestBoard/HK-ESPTB.html">HK-ESPTB</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../TestBoard/HK-RFTB.html">HK-RFTB</a></li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">弘科科技</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../index.html" class="icon icon-home"></a> &raquo;</li>
+        
+          <li><a href="index.html">Multi-Protocol</a> &raquo;</li>
+        
+      <li>HK-32U</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            <a href="../../_sources/source/Multi-Protocol/HK-32U.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="hk-32u">
+<h1>HK-32U<a class="headerlink" href="#hk-32u" title="永久链接至标题">¶</a></h1>
+<div class="section" id="id1">
+<h2>产品概述<a class="headerlink" href="#id1" title="永久链接至标题">¶</a></h2>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+        <a href="HK-32S.html" class="btn btn-neutral float-right" title="HK-32S" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="HK-32D.html" class="btn btn-neutral float-left" title="HK-32D" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &#169; 版权所有 2020, .
+
+    </p>
+  </div>
+    
+    
+    
+    Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

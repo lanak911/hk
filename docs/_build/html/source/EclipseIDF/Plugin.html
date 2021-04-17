@@ -1,0 +1,384 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="zh-CH" >
+<head>
+  <meta charset="utf-8" />
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+  <title>Eclipse IDE开发环境设置(插件版) &mdash; 弘科科技  文档</title>
+  
+
+  
+  <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/theme.css" type="text/css" />
+
+  
+  
+
+  
+  
+
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
+        <script src="../../_static/jquery.js"></script>
+        <script src="../../_static/underscore.js"></script>
+        <script src="../../_static/doctools.js"></script>
+        <script src="../../_static/language_data.js"></script>
+    
+    <script type="text/javascript" src="../../_static/js/theme.js"></script>
+
+    
+    <link rel="index" title="索引" href="../../genindex.html" />
+    <link rel="search" title="搜索" href="../../search.html" />
+    <link rel="next" title="WiFi" href="../WiFi/index.html" />
+    <link rel="prev" title="Eclipse IDE开发环境搭建" href="index.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../../index.html" class="icon icon-home"> 弘科科技
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">如何使用此文档</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../HowUse/index.html">如何使用此文档</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Languages/语言</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../Languages/index.html">Switch Between Languages/切换语言</a></li>
+</ul>
+<p class="caption"><span class="caption-text">开发环境搭建</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../Arduino/index.html">Arduino开发环境搭建</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../esp-idf/index.html">ESP-IDF开发环境搭建</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">Eclipse IDE开发环境搭建</a><ul class="current">
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Eclipse IDE开发环境设置(插件版)</a></li>
+</ul>
+</li>
+</ul>
+<p class="caption"><span class="caption-text">无线模组</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../WiFi/index.html">WiFi</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Bluetooth/index.html">Bluetooth</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Zigbee/index.html">Zigbee</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../LoRa/index.html">LoRa</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Sub1G/index.html">Sub1G</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../2.4G/index.html">2.4G</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Multi-Protocol/index.html">Multi-Protocol</a></li>
+</ul>
+<p class="caption"><span class="caption-text">开发板</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../DevelopmentBoard/HK-D1-MiniPro4M.html">HK-D1-MiniPro4M</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../DevelopmentBoard/HK-D1-MiniPro16M.html">HK-D1-MiniPro16M</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../DevelopmentBoard/HK-ESP32-CAM.html">HK-ESP32-CAM</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../DevelopmentBoard/HK-ESP32-CAM-MB.html">HK-ESP32-CAM-MB</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../DevelopmentBoard/HK-ESP32-MiniKit%28BLACK%29.html">HK-ESP32-MiniKit(BLACK)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../DevelopmentBoard/HK-ESP32-MiniKit%28BLUE%29.html">HK-ESP32-MiniKit(BLUE)</a></li>
+</ul>
+<p class="caption"><span class="caption-text">测试板</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../TestBoard/HK-ESPTB.html">HK-ESPTB</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../TestBoard/HK-RFTB.html">HK-RFTB</a></li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">弘科科技</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../index.html" class="icon icon-home"></a> &raquo;</li>
+        
+          <li><a href="index.html">Eclipse IDE开发环境搭建</a> &raquo;</li>
+        
+      <li>Eclipse IDE开发环境设置(插件版)</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            <a href="../../_sources/source/EclipseIDF/Plugin.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="eclipse-ide">
+<h1>Eclipse IDE开发环境设置(插件版)<a class="headerlink" href="#eclipse-ide" title="永久链接至标题">¶</a></h1>
+<p>先决条件
+运行IDF Eclipse插件的最低要求是：</p>
+<div class="admonition important">
+<p class="admonition-title">重要</p>
+<p>Java 11及更高版本：点击下载并安装 <a class="reference external" href="https://www.oracle.com/java/technologies/javase-downloads.html">Java SE</a>.</p>
+<p>Python 3.5及更高版本：点击下载并安装 <a class="reference external" href="https://www.python.org/downloads/">Python</a>.</p>
+<p>Git：获取最新的git: 点击下载并安装  <a class="reference external" href="https://git-scm.com/downloads">Git</a>.</p>
+<p>ESP-IDF 4.0及更高版本：克隆ESP-IDF存储库</p>
+</div>
+<p>（1） <strong>下载C/C++版的eclipse</strong></p>
+<blockquote>
+<div><p>点击下载 <a class="reference external" href="https://www.eclipse.org/downloads/packages/">eclipse</a>.</p>
+</div></blockquote>
+<div class="align-center figure">
+<img alt="../../_images/12.png" src="../../_images/12.png" />
+</div>
+<p>（2） <strong>安装IDF插件，打开eclipse，，Espressif IDF从列表中选择并继续安装</strong></p>
+<div class="align-center figure" id="id1">
+<img alt="点击Help-&gt;Install New Software" src="../../_images/22.png" />
+<p class="caption"><span class="caption-text">点击Help-&gt;Install New Software</span><a class="headerlink" href="#id1" title="永久链接至图片">¶</a></p>
+</div>
+<div class="align-center figure" id="id2">
+<img alt="" src="../../_images/32.png" />
+<p class="caption"><span class="caption-text">点击Add…，输入Name为Espressif IDF Plugin for Eclipse，输入Location存储库https://dl.espressif.com/dl/idf-eclipse-plugin/updates/latest/</span><a class="headerlink" href="#id2" title="永久链接至图片">¶</a></p>
+</div>
+<div class="align-center figure" id="id3">
+<img alt="" src="../../_images/42.png" />
+<p class="caption"><span class="caption-text">勾选Espressif IDF，点击Next</span><a class="headerlink" href="#id3" title="永久链接至图片">¶</a></p>
+</div>
+<div class="align-center figure" id="id4">
+<img alt="" src="../../_images/51.png" />
+<p class="caption"><span class="caption-text">点击Next，</span><a class="headerlink" href="#id4" title="永久链接至图片">¶</a></p>
+</div>
+<div class="align-center figure" id="id5">
+<img alt="" src="../../_images/61.png" />
+<p class="caption"><span class="caption-text">勾选l accept the terms of the license agreements，点击Finish</span><a class="headerlink" href="#id5" title="永久链接至图片">¶</a></p>
+</div>
+<div class="align-center figure" id="id6">
+<img alt="" src="../../_images/7.png" />
+<p class="caption"><span class="caption-text">确认安装</span><a class="headerlink" href="#id6" title="永久链接至图片">¶</a></p>
+</div>
+<div class="align-center figure" id="id7">
+<img alt="" src="../../_images/8.png" />
+<p class="caption"><span class="caption-text">接受证书</span><a class="headerlink" href="#id7" title="永久链接至图片">¶</a></p>
+</div>
+<div class="align-center figure" id="id8">
+<img alt="" src="../../_images/9.png" />
+<p class="caption"><span class="caption-text">重启IDE</span><a class="headerlink" href="#id8" title="永久链接至图片">¶</a></p>
+</div>
+<p>（3） <strong>安装ESP-IDF工具</strong></p>
+<div class="align-center figure" id="id9">
+<img alt="" src="../../_images/10.png" />
+<p class="caption"><span class="caption-text">选择Help&gt; ESP-IDF Tools Manager&gt;Install Tools</span><a class="headerlink" href="#id9" title="永久链接至图片">¶</a></p>
+</div>
+<div class="align-center figure" id="id10">
+<img alt="" src="../../_images/111.png" />
+<p class="caption"><span class="caption-text">提供ESP-IDF Directory路径，提供Git和Python可执行位置（如果未自动检测）。单击Install Tools以继续安装过程。检查控制台以获取安装详细信息。如果您是第一次安装，则可能需要一段时间，因为它必须下载并安装xtensa-esp32-elf，esp32ulp-elf，cmake，openocd-esp32和ninja工具。</span><a class="headerlink" href="#id10" title="永久链接至图片">¶</a></p>
+</div>
+<p>（4） <strong>创建一个新项目</strong></p>
+<div class="align-center figure" id="id11">
+<img alt="" src="../../_images/121.png" />
+<p class="caption"><span class="caption-text">点击Window-&gt; Perspective-&gt; Reset Perspective..</span><a class="headerlink" href="#id11" title="永久链接至图片">¶</a></p>
+</div>
+<div class="align-center figure" id="id12">
+<img alt="" src="../../_images/13.png" />
+<p class="caption"><span class="caption-text">转到File&gt; New&gt; Espressif IDF Project</span><a class="headerlink" href="#id12" title="永久链接至图片">¶</a></p>
+</div>
+<div class="align-center figure" id="id13">
+<img alt="" src="../../_images/14.png" />
+<p class="caption"><span class="caption-text">转到File&gt; New&gt; Espressif IDF Project，提供 Project name（这里以hello_world为例），点击Next</span><a class="headerlink" href="#id13" title="永久链接至图片">¶</a></p>
+</div>
+<div class="align-center figure" id="id14">
+<img alt="" src="../../_images/151.png" />
+<p class="caption"><span class="caption-text">转到File&gt; New&gt; Espressif IDF Project，选择hello_world</span><a class="headerlink" href="#id14" title="永久链接至图片">¶</a></p>
+</div>
+<p>（6） <strong>配置启动目标</strong></p>
+<div class="align-center figure" id="id15">
+<img alt="" src="../../_images/161.png" />
+<p class="caption"><span class="caption-text">先将ESP设备已连接到您的电脑，点击第三个下拉菜单，选择 New Launch Target</span><a class="headerlink" href="#id15" title="永久链接至图片">¶</a></p>
+</div>
+<div class="align-center figure" id="id16">
+<img alt="" src="../../_images/17.png" />
+<p class="caption"><span class="caption-text">选择ESP Target，点击Next</span><a class="headerlink" href="#id16" title="永久链接至图片">¶</a></p>
+</div>
+<div class="align-center figure" id="id17">
+<img alt="" src="../../_images/18.png" />
+<p class="caption"><span class="caption-text">这里Name为目标输入hello_word（可以自定义名字） ** ，IDF Target 是esp32， Serial Port我这里是COM18（一般会自动识别） **</span><a class="headerlink" href="#id17" title="永久链接至图片">¶</a></p>
+</div>
+<p>（7） <strong>编译项目</strong></p>
+<div class="align-center figure" id="id18">
+<img alt="" src="../../_images/19.png" />
+<p class="caption"><span class="caption-text">单击在Build工具栏最左侧看到的按钮小部件，编译完成如图中的②</span><a class="headerlink" href="#id18" title="永久链接至图片">¶</a></p>
+</div>
+<p>（8） <strong>烧录项目</strong></p>
+<div class="align-center figure" id="id19">
+<img alt="" src="../../_images/20.png" />
+<p class="caption"><span class="caption-text">单击启动按钮（左侧的第二个按钮）即可启动Flash操作</span><a class="headerlink" href="#id19" title="永久链接至图片">¶</a></p>
+</div>
+<p>（9） <strong>查看串行输出</strong></p>
+<div class="align-center figure" id="id20">
+<img alt="" src="../../_images/211.png" />
+<p class="caption"><span class="caption-text">单击Open a Terminal工具栏上的图标</span><a class="headerlink" href="#id20" title="永久链接至图片">¶</a></p>
+</div>
+<div class="align-center figure" id="id21">
+<img alt="" src="../../_images/221.png" />
+<p class="caption"><span class="caption-text">配置ESP-IDF Serial Monitor来连接到串行端口，默认情况下，波特率和串行端口设置是自动配置的。</span><a class="headerlink" href="#id21" title="永久链接至图片">¶</a></p>
+</div>
+<div class="align-center figure" id="id22">
+<img alt="" src="../../_images/23.png" />
+<p class="caption"><span class="caption-text">查看串行输出</span><a class="headerlink" href="#id22" title="永久链接至图片">¶</a></p>
+</div>
+<p>至此，我们已经完成了hello_word项目的烧录，可以尝试其他项目的烧录
+以上介绍的是创建新项目，您也可以导入本地现有项目
+在File-&gt;import...，在Espressif菜单列表中选择Existing IDF Project，点击Next，单击Browse...以选择一个现有的项目位置目录，提供Project name，点击Finish。</p>
+<p>（10） <strong>配置项目</strong></p>
+<blockquote>
+<div><p>在终端我们需要输入idf.py menuconfig 来打开配置项目，而IDF插件可以使您sdkconfig无需离开Eclipse环境即可进行配置</p>
+</div></blockquote>
+<div class="align-center figure" id="id23">
+<img alt="" src="../../_images/24.png" />
+<p class="caption"><span class="caption-text">导航到sdkconfig文件，双击该文件以启动SDK配置编辑器，这里就类似我们终端的配置项目，可以根据需要配置项目</span><a class="headerlink" href="#id23" title="永久链接至图片">¶</a></p>
+</div>
+<p>（11） <strong>ESP-IDF应用程序大小分析</strong></p>
+<blockquote>
+<div><p>右键点击项目，选择ESP-IDF: Application Size Analysis菜单选项以启动编辑器</p>
+</div></blockquote>
+<p>（12） <strong>ESP-IDF终端</strong></p>
+<blockquote>
+<div><p>单击Open a Terminal工具栏上的图标，ESP-IDF Terminal从终端下拉菜单中选择，然后单击OK以启动终端</p>
+</div></blockquote>
+<p>（13） ** <strong>升级现有的IDF Eclipse插件</strong></p>
+<blockquote>
+<div><p>点击Help-&gt; Check for Updates，如果找到更新，请选择Espressif IDF Plugins for Eclipse并取消选择所有其他项目，单击Next以继续安装</p>
+</div></blockquote>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+        <a href="../WiFi/index.html" class="btn btn-neutral float-right" title="WiFi" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="index.html" class="btn btn-neutral float-left" title="Eclipse IDE开发环境搭建" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &#169; 版权所有 2020, .
+
+    </p>
+  </div>
+    
+    
+    
+    Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>
